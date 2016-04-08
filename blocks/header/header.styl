@@ -1,0 +1,50 @@
+.header
+  min-height: 64rem
+
+  background-repeat: no-repeat
+  background-position: top center
+  background-size: cover
+  background-image: url('../../lib/images/header-bg.jpg')
+
+  color: #fff
+
+  &-title
+    font: normal 6.6rem/110% Circe Extra Light
+    padding-top: 27.2rem
+
+  &-subtitle
+    font: normal 3rem/134% Circe Extra Light
+    margin: 2rem 0 3.5rem
+    color: #9b9b9b
+
+  &-logo
+    display: block
+    width: 10.4rem
+    height: 5.6rem
+    margin-top: 4.8rem
+
+    float: left
+
+    background-repeat: no-repeat
+    background-position: top center
+    background-image: url('../../lib/images/logo.svg')
+
+  &-settings
+    font: 1.1rem/146% Circe
+
+    margin-top: 5.4rem
+    float: right
+
+    text-transform: uppercase
+
+    &-lang
+      margin-right: 4rem
+      cursor: pointer
+
+      &::after
+        arrow()
+        transform: rotate(90deg)
+
+    &-website
+      color: $cYellow
+      text-decoration: none
