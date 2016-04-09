@@ -10,3 +10,16 @@ arrow()
   background-position: top center
   background-size: cover
   background-image: url('../../lib/images/arrow@2x.png')
+
+section()
+  margin: 0 auto
+  padding: $pOffsetX
+  max-width: $pMaxWidth
+  min-width: $pMinWidth
+  width: 100%
+
+  box-sizing: border-box
+
+  @media (max-width: $isMobile)
+    &
+      padding: $pMobileOffsetX

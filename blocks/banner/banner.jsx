@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export class Banner extends Component {
     render() {
         return (
-            <section className="section banner">
+            <section className="banner">
                 <span className="banner-for-all">Для всех типов счетов</span>
                 <span className="banner-commission">
                     <span className="banner-commission-zero" />

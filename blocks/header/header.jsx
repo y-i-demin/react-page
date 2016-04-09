@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export class Header extends Component {
     render() {
         return (
-            <section className="section header">
+            <section className="header">
                 <a href="#" className="header-logo" />
 
                 <div className="header-settings">
