@@ -1,5 +1,5 @@
 .header
-  min-height: 64rem
+  padding: 4.8rem $pOffsetX
 
   background-repeat: no-repeat
   background-position: top center
@@ -8,20 +8,34 @@
 
   color: #fff
 
+  user-select: none
+
+  @media (max-width: $isMobile)
+    &
+      padding: $pMobileOffsetX
+
   &-title
     font: normal 6.6rem/110% Circe Extra Light
-    padding-top: 27.2rem
+    margin-top: 21.5rem
+
+    @media (max-width: $isTablet)
+      &
+        font-size: 4rem
+        line-height: 120%
 
   &-subtitle
     font: normal 3rem/134% Circe Extra Light
     margin: 2rem 0 3.5rem
     color: #9b9b9b
 
+    @media (max-width: $isTablet)
+      &
+        font-size: 2.4rem
+
   &-logo
     display: block
     width: 10.4rem
     height: 5.6rem
-    margin-top: 4.8rem
 
     float: left
 
@@ -32,10 +46,14 @@
   &-settings
     font: 1.1rem/146% Circe
 
-    margin-top: 5.4rem
+    margin-top: .6rem
     float: right
 
     text-transform: uppercase
+
+    @media (max-width: $isMobile)
+      &
+        display: none
 
     &-lang
       margin-right: 4rem

@@ -6,15 +6,19 @@ html
   font-size: 62.5%
 
 body
-  font: 3.3rem Circe
+  font: 3.3rem Circe, sans-serif
   min-width: $pMinWidth
+  background: $pBackground
 
 .section
-  &-inner
-    margin: 0 auto
-    padding: 0 $pOffsetX
-    max-width: $pMaxWidth
-    min-width: $pMinWidth
-    width: 100%
+  margin: 0 auto
+  padding: $pOffsetX
+  max-width: $pMaxWidth
+  min-width: $pMinWidth
+  width: 100%
 
-    box-sizing: border-box
+  box-sizing: border-box
+
+  @media (max-width: $isMobile)
+    &
+      padding: $pMobileOffsetX
