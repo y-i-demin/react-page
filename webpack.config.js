@@ -17,11 +17,11 @@ module.exports = [
                 },
                 {
                     test: /\.(png|jpg|svg)$/,
-                    loader: 'file-loader?name=images/[name].[ext]'
+                    loader: 'url-loader?limit=14336' // inline base64 URLs for <=14k images
                 },
                 {
                     test: /\.(woff)$/,
-                    loader: 'file-loader?name=fonts/[name].[ext]'
+                    loader: 'url-loader'
                 }
             ]
         },
