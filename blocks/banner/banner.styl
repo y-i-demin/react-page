@@ -1,0 +1,94 @@
+$bannderHeight = 40rem
+
+.banner
+  position: relative
+
+  padding: 4.3rem $pOffsetX
+
+  background-color: $cYellow
+  user-select: none
+  white-space: nowrap
+
+  @media (max-width: $isMobile)
+    &
+      padding: 4.3rem $pMobileOffsetX
+
+  &-for-all
+    position: absolute
+    left: $pOffsetX
+    bottom: 0
+
+    font: 2rem Circe Bold
+
+    display: inline-block
+    width: $bannderHeight
+    height: .5rem
+
+    text-align: center
+    transform: rotate(-90deg)
+    transform-origin: left bottom 0
+
+    @media (max-width: 1280px)
+        &
+          display: none
+
+  &-info
+    font-size: 4rem
+    line-height: 120%
+
+    display: inline-block
+    max-width: 58rem
+
+    vertical-align: middle
+    white-space: normal
+
+    @media (max-width: 1280px)
+      &
+        max-width: 100%
+
+        display: block
+        margin-top: 2rem
+
+        text-align: center
+
+    @media (max-width: $isTablet)
+      &
+        font-size: 2.2rem
+        line-height: 146%
+
+  &-commission
+    display: inline-block
+    width: 32rem
+    margin: 0 15rem 0 12rem
+
+    text-align: center
+    vertical-align: middle
+    white-space: normal
+
+    @media (max-width: 1280px)
+      &
+        width: 100%
+        margin: 0
+
+    &-info
+      font: 2rem/160% Circe Bold
+
+      @media (max-width: 1280px)
+        &
+          display: none
+
+    &-zero
+      display: inline-block
+      width: 32rem
+      height: 25rem
+
+      background-repeat: no-repeat
+      background-position: top center
+      background-image: url('../../lib/images/zero.svg')
+
+      @media (max-width: $isTablet)
+        &
+          width: 20.6rem
+          height: 16.2rem
+
+          background-size: cover
