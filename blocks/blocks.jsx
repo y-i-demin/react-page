@@ -3,3 +3,4 @@ export * from './banner/banner.jsx';
 export * from './footer/footer.jsx';
 export * from './social/social.jsx';
 export * from './copyright/copyright.jsx';
+export * from './navigation/navigation.jsx';

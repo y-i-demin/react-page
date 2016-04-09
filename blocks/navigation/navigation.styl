@@ -1,0 +1,78 @@
+.navigation
+  section()
+  clearfix()
+
+  font: 1.6rem/170% Circe Light
+
+  padding-top: 3.4rem
+  padding-bottom: 1.5rem
+
+  border-top: .1rem solid rgba(151, 151, 151, 0.3)
+  user-select: none
+
+  &-list
+    list-style: none
+    width: 20rem
+    float: left
+
+    & + &
+      margin-left: 4.2rem
+
+    &-item
+      &-link
+        color: #9b9b9b
+        transition: color .15s ease-out
+
+        &:hover
+          color: #fff
+
+        &__head
+          color: #fff
+
+    @media (max-width: 1279px) and (min-width: 1095px)
+      &
+        width: 18rem
+
+      & + &
+        margin-left: 2rem
+
+    @media (max-width: 1094px) and (min-width: 960px)
+      &
+        width: 16rem
+
+      & + &
+        margin-left: 1rem
+
+  @media (max-width: 959px)
+    &
+      font: 1.6rem/150% Circe
+
+      padding-bottom: 2.2rem
+      padding-top: .8rem
+
+      text-align: center
+      border-top: none
+      border-bottom: .1rem solid rgba(151, 151, 151, 0.3)
+
+    &-list
+      display: inline-block
+      width: auto
+      margin: 0 1.5rem
+
+      float: none
+
+      &-emptyhead
+        display: none
+
+      & + &
+        margin-left: 0
+
+      &-item
+        display: none
+
+        &-head
+          display: inline
+
+        &-link
+          text-decoration: none
+
