@@ -1,0 +1,28 @@
+.social
+  line-height: 8.8rem
+  text-align: center
+
+  &-item
+    display: inline-block
+    width: 2rem
+    height: @width
+    margin: 0 .7rem
+
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    background-image: url('../../lib/images/header-bg.jpg')
+
+    @media (max-width: 330px)
+      &
+        margin: 0 .6rem
+
+    for social in ('vk' 'ok' 'tw' 'fb' 'yt' 'in' 'ks' 'ig' 'gg')
+      &__{social}
+        background-image: url('../../lib/images/' + social + '.png')
+
+        if social == 'yt'
+          width: 2.7rem
+
+        if social == 'vk'
+          width: 3.2rem
