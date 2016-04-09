@@ -58,7 +58,6 @@ export class Navigation extends Component {
 
 class NavigationBlock extends Component {
     render() {
-        console.log();
         return (
             <ul className={ 'navigation-list' + (this.props.items[0].name !== '' ? '' : ' navigation-list-emptyhead')}>
                 { this.props.items.map((item, index) => {
