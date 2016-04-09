@@ -8,6 +8,11 @@
     &
       padding: 0
 
+  &-section
+    section()
+
+    border-top: .1rem solid rgba(151, 151, 151, 0.3)
+
 .social
   line-height: 8.8rem
   text-align: center
@@ -36,3 +41,65 @@
 
         if social == 'vk'
           width: 3.2rem
+
+.copyright
+  display: table
+
+  font: 1.1rem/146% Arial
+  color: #616161
+
+  user-select: none
+
+  @media (max-width: $isTablet)
+    &
+      text-align: center
+
+  &-info
+    display: table-cell
+    vertical-align: top
+
+    @media (max-width: $isTablet)
+      &
+        display: block
+
+    &-item + &-item
+      margin-top: 2rem
+
+    &-link
+      &:link,
+      &:visited,
+      &:hover,
+      &:active
+        color: #616161
+
+  &-icons
+    display: table-cell
+    padding-left: 7rem
+
+    text-align: right
+    vertical-align: top
+    white-space: nowrap
+
+    @media (max-width: $isTablet)
+      &
+        display: block
+        text-align: center
+        padding-left: 0
+
+      &-separator
+        display: none
+
+    @media (max-width: 560px)
+      &
+        display: none
+
+    &-item
+      vertical-align: middle
+      margin-bottom: 2rem
+
+      @media (max-width: $isTablet)
+        &
+          margin-top: 3rem
+
+    &-item + &-item
+      margin-left: 3rem
