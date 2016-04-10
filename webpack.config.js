@@ -4,7 +4,10 @@ var path = require('path');
 module.exports = [
     {
         context: __dirname,
-        entry: './pages/main/main.styl',
+        entry: {
+            main: './pages/main/main.styl',
+            cart: './pages/cart/cart.styl'
+        },
         output: {
             path: path.join(__dirname, 'source/css'),
                 filename: '[name].css'
@@ -33,10 +36,13 @@ module.exports = [
         name: 'clientside',
         target: 'web',
         context: __dirname,
-        entry: './pages/main/main.js',
+        entry: {
+            main: './pages/main/main.js',
+            cart: './pages/cart/cart.js'
+        },
         output: {
             path: path.join(__dirname, 'source/js'),
-                filename: 'app.js'
+                filename: '[name].js'
         },
         module: {
             loaders: [{
