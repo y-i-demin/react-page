@@ -1,12 +1,16 @@
 .payment-systems
   section()
 
-  padding: 4.5rem $pOffsetX
+  padding: 4.5rem $pOffsetX 5.3rem
 
   text-align: center
   background-color: #fff
 
   user-select: none
+
+  @media (max-width: $isMobile)
+    &
+      padding-bottom: 7.5rem
 
   &-title
     font-family: Circe, sans-serif
