@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { OpenAccount } from '../blocks.jsx';
 
 export class PaymentSystems extends Component {
     constructor() {
@@ -25,6 +26,8 @@ export class PaymentSystems extends Component {
                     <span className="payment-systems-icons-bt payment-systems-icons-bt-left" />
                     <span className="payment-systems-icons-bt payment-systems-icons-bt-right" />
                 </div>
+
+                <OpenAccount />
             </section>
         )
     }
