@@ -1,0 +1,87 @@
+$inputOffsetX = 2.3rem
+
+.open-account
+  &-note
+    font-family: Circe, sans-serif
+    font-size: 1.4rem
+    line-height: 143%
+
+    width: 55rem
+    margin: 5rem auto 0
+
+    @media (max-width: 650px)
+      &
+        font-size: 1.3rem
+        line-height: 124%
+
+        width: auto
+        margin: 3rem 0 0
+
+  &-form
+    margin-top: 8.8rem
+
+    @media (max-width: 1105px)
+      &
+        margin-top: 3.3rem
+
+    &-input
+      font-family: Circe, sans-serif
+      font-size: 1.6rem
+
+      line-height: 7.2rem
+
+      width: 100%
+      padding: 0 $inputOffsetX
+
+      border: none
+      background: #efefef
+
+      outline: none
+      box-sizing: border-box
+      transition: background .15s ease-out
+
+      @media (max-width: $isMobile)
+        &
+          display: none
+
+      &::placeholder
+        color: #9b9b9b
+
+      &:focus
+        background: #fff
+        box-shadow: 0 0 .8rem .2rem rgba(0, 0, 0, .12)
+
+      &-wrap
+        position: relative
+
+        display: inline-block
+
+        width: 32.8rem
+        margin-right: 1.6rem
+
+        @media (max-width: 1105px)
+          &
+            display: block
+
+            width: 30.4rem
+            margin: 0 auto 1rem
+
+      &-hint
+        position: absolute
+        left: 0
+
+        font-size: 1.1rem
+
+        display: block
+        margin: 1.1rem 0 0 $inputOffsetX
+
+        text-align: left
+        color: #9b9b9b
+
+        @media (max-width: 1105px)
+          &
+            position: static
+
+        @media (max-width: $isMobile)
+          &
+            display: none

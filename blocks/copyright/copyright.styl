@@ -3,13 +3,17 @@
 
   display: table
 
-  font-family: Arial
+  font-family: Arial, sans-serif
   font-size: 1.1rem
   line-height: 146%
 
   color: #616161
 
   user-select: none
+
+  @media (max-width: $isMobile)
+    &
+      padding-top: 3.2rem
 
   @media (max-width: $isTablet)
     &
@@ -24,7 +28,7 @@
         display: block
 
     &-item + &-item
-      margin-top: 2rem
+      margin-top: 1.6rem
 
     &-link
       &:link,
