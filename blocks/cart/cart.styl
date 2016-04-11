@@ -1,0 +1,28 @@
+.cart
+  section()
+  clearfix()
+
+  background: #fff
+  user-select: none
+
+  &-removeall,
+  &-sync
+    goodsListButton()
+
+  &-removeall
+    background: $cRed
+
+  &-sync
+    margin-left: 1rem
+
+    &-status
+      font-size: 1.6rem
+
+      padding: 1.5rem
+      margin-top: 1.5rem
+
+      &__ok
+        background: $cGreen
+
+      &__error
+        background: $cRed
