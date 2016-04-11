@@ -1,4 +1,5 @@
 var extractTextPlugin = require('extract-text-webpack-plugin');
+var webpack = require('webpack');
 var path = require('path');
 
 module.exports = [
@@ -61,6 +62,11 @@ module.exports = [
                 }
             ]
         },
-        profile: false
+        profile: false,
+        plugins: [
+            new webpack.DefinePlugin({
+              'process.env.NODE_ENV': '"production"'
+            })
+        ]
     }
 ];
