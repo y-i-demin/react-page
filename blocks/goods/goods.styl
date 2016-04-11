@@ -12,6 +12,10 @@
 
   border-collapse: collapse
 
+  @media (max-width: $isTablet)
+    &
+      font-size: 1.3rem
+
   &-item
     font-family: CirceLight, sans-serif
 
@@ -31,11 +35,20 @@
         width: 10rem
         white-space: nowrap
 
+        @media (max-width: $isMobile)
+          &
+            white-space: normal
+            width: auto
+
       &-count
         text-align: center
 
       & + &
         padding-left: 1rem
+
+        @media (max-width: $isMobile)
+          &
+            padding-left: .5rem
 
     &-sort &-prop
       font-family: CirceBold, sans-serif

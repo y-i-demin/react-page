@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export class Header extends Component {
     render() {
         return (
-            <section className="header">
+            <header className="header">
                 <a href="#" className="header-logo" />
 
                 <div className="header-settings">
@@ -15,7 +15,7 @@ export class Header extends Component {
                 <h2 className="header-subtitle">Пополняйте счет и выводите прибыть без комиссий</h2>
 
                 <a href="#" className="button">пополнить счет</a>
-            </section>
+            </header>
         )
     }
 }
