@@ -4,6 +4,7 @@ export class Navigation extends Component {
     constructor() {
         super();
 
+        // Допустим backend возвразает подобную структуру каталога сайта
         this.items = [
             [
                 { name: 'О компании', href: '#' },

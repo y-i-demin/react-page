@@ -1,11 +1,19 @@
 import { combineReducers } from 'redux';
 import { ADD_TO_CART, REMOVE_FROM_CART, SET_CART_SORT, CLEAR_CART, SYNC_CART } from './actions';
 
+/**
+ * Изменение состояния объекта товарных позиций в хранилище
+ * @reducer
+ * @param {Object} state - текущее состояние
+ * @param {Object} action - событие
+ * @returns {Object} state
+ */
 function items(state = {}, action = {}) {
     switch (action.type) {
         case ADD_TO_CART:
             const item = action.item;
             const count = action.count || 1;
+
             return Object.assign({}, state, {
                 [item.id]: {
                     id: item.id,
@@ -28,6 +36,13 @@ function items(state = {}, action = {}) {
     }
 }
 
+/**
+ * Изменение состояния объекта сортировки товарных позиций в хранилище
+ * @reducer
+ * @param {Object} state - текущее состояние
+ * @param {Object} action - событие
+ * @returns {Object} state
+ */
 function sort(state = {}, action = {}) {
     switch (action.type) {
         case SET_CART_SORT:
@@ -41,6 +56,13 @@ function sort(state = {}, action = {}) {
     }
 }
 
+/**
+ * Изменение состояния синхроиизации корзины с backend'ом
+ * @reducer
+ * @param {String|Null} state - текущее состояние
+ * @param {Object} action - событие
+ * @returns {Object} state
+ */
 function sync(state = null, action = {}) {
     switch (action.type) {
         case SYNC_CART:
@@ -51,6 +73,12 @@ function sync(state = null, action = {}) {
     }
 }
 
+/**
+ * Корневой редьюсер, связывает сегменты хранилища с редьюсерами
+ * "store.items: items(store.items, action)"
+ * @combineReducers
+ * @returns {Object} state
+ */
 export default combineReducers({
     items,
     sort,

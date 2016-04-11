@@ -4,6 +4,12 @@ import { clearCart, syncCart } from './actions';
 import stable from 'stable';
 
 export class Cart extends Component {
+    /**
+     * Сортировка товарных позиций
+     * @param {Array} cart - массив товарных позиций
+     * @param {Object} options - параметры сортировки
+     * @returns {Array}
+     */
     sortCart(cart, options) {
         function lexCmp(a, b) {
             return options.type === 'asc' ? String(a[options.field]).localeCompare(b[options.field])
@@ -13,6 +19,10 @@ export class Cart extends Component {
         return stable(cart, lexCmp);
     }
 
+    /**
+     * Трансформация полученного объекта товарных позиций.
+     * @returns {Array}
+     */
     getCart() {
         const result = [];
 
@@ -27,11 +37,17 @@ export class Cart extends Component {
         return result;
     }
 
+    /**
+     * Очистка корзины
+     */
     clearCart() {
         this.props.dispatch(clearCart());
         this.props.dispatch(syncCart());
     }
 
+    /**
+     * Синхронизация с сервером. Заглушка
+     */
     syncCart(reject) {
         if (this.clearSync) {
             clearTimeout(this.clearSync);
