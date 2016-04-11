@@ -4,6 +4,7 @@ export class Social extends Component {
     constructor() {
         super();
 
+        // Социальные провайдеры
         this.items = [
             { code: 'vk', href: "#", name: 'vkontakte' },
             { code: 'ok', href: "#", name: 'odnoklassniki' },

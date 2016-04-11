@@ -2,10 +2,17 @@ import React, { Component } from 'react';
 import { addToCart, removeFromCart, setSort } from '../cart/actions';
 
 export class Goods extends Component {
+    /**
+     * Товарные позиции не подгружаются асинхронно,
+     * этот компонент никогад не обновляется в рантайме
+     */
     shouldComponentUpdate() {
         return false;
     }
 
+    /**
+     * Заполнение корзины случайным количеством товара
+     */
     fillCart() {
         this.props.goods.map(item => {
             this.props.dispatch(addToCart(item, Math.round(Math.random()*10)));
@@ -51,10 +58,18 @@ export class GoodsList extends Component {
 }
 
 class GoodsItem extends Component {
+    /**
+     * Удаление товарной позиции из корзины
+     * @param {Number} item - идентификатор товарной позиции
+     */
     removeFromCart(item) {
         this.props.dispatch(removeFromCart(item.id));
     }
 
+    /**
+     * Добавление товарной позиции в корзину
+     * @param {Object} item - товарная позиция
+     */
     addToCart(item) {
         this.props.dispatch(addToCart(item));
     }
@@ -80,6 +95,10 @@ class GoodsItem extends Component {
 }
 
 class SortRow extends Component {
+    /**
+     * Сортировка списка товаров в корзине по полю
+     * @param {String} field - поле сортировки
+     */
     setSort(field) {
         this.props.dispatch(setSort(field));
     }

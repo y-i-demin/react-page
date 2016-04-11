@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
 
 export class OpenAccount extends Component {
-    constructor() {
-        super();
-
-        this.paymentSystems = [
-            'fp', 'cash', 'pm', 'wm',
-            'net', 'visa', 'pw', 'uk'
-        ];
-    }
-
     render() {
         return (
             <div className="open-account-form">

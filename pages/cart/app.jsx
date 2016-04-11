@@ -2,6 +2,9 @@ import React, { Component, PropTypes } from 'react';
 import { Goods, Cart } from '../../blocks/blocks.jsx';
 import { connect } from 'react-redux';
 
+/**
+ * @class App - контейнер компонентов
+ */
 class App extends Component {
     render() {
         return (
@@ -23,4 +26,7 @@ App.propTypes = {
     cart: PropTypes.object.isRequired
 };
 
+/**
+ * Связывание контейнера с redux
+ */
 export default connect(state => state)(App);

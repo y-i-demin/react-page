@@ -5,6 +5,7 @@ export class PaymentSystems extends Component {
     constructor() {
         super();
 
+        // Доступные платежные системы
         this.paymentSystems = [
             'fp', 'cash', 'pm', 'wm',
             'net', 'visa', 'pw', 'uk'
