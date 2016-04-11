@@ -1,0 +1,27 @@
+[
+    {
+        "id": 14962,
+        "name": "Фотоаппарат Canon EOS 100D BODY",
+        "price": 23950
+    },
+    {
+        "id": 75003,
+        "name": "Фотоаппарат Canon EOS 100D KIT EF-S 18-55 III",
+        "price": 29790
+    },
+    {
+        "id": 66845,
+        "name": "Фотоаппарат Canon EOS 750D KIT 18-55mm IS STM",
+        "price": 55570
+    },
+    {
+        "id": 13230,
+        "name": "Фотоаппарат Nikon D3200 Body",
+        "price": 17750
+    },
+    {
+        "id": 12760,
+        "name": "Фотоаппарат Nikon D3200 KIT AF-S NIKKOR 18-105mm VR",
+        "price": 30300
+    }
+]

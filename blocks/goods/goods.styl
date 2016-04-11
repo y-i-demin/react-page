@@ -1,0 +1,52 @@
+.goods
+  section()
+
+  background: #fff
+  user-select: none
+
+  &-fillcart
+    goodsListButton()
+
+.list
+  font-size: 1.6rem
+
+  border-collapse: collapse
+
+  &-item
+    font-family: CirceLight, sans-serif
+
+    &-prop
+      padding: 1rem 0
+
+      border-top: .1rem solid rgba(151, 151, 151, .3)
+      vertical-align: middle
+
+      &-name
+        font-family: CirceExtraLight, sans-serif
+        width: 50rem
+        max-width: 100%
+
+      &-price,
+      &-count
+        width: 10rem
+        white-space: nowrap
+
+      &-count
+        text-align: center
+
+      & + &
+        padding-left: 1rem
+
+    &-sort &-prop
+      font-family: CirceBold, sans-serif
+      cursor: pointer
+
+    &:first-child &-prop
+      border-top: none
+
+    &-add,
+    &-remove
+      goodsListButton()
+
+    &-remove
+      background: $cRed

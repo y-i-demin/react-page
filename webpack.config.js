@@ -45,14 +45,21 @@ module.exports = [
                 filename: '[name].js'
         },
         module: {
-            loaders: [{
-                test: /\.jsx?$/,
-                loader: 'babel-loader',
-                query: {
-                    presets: ['react', 'es2015'],
-                    cacheDirectory: true
+            loaders: [
+                {
+                    test: /\.jsx?$/,
+                    loader: 'babel-loader',
+                    query: {
+                        presets: ['react', 'es2015'],
+                        plugins: ['jsx-control-statements'],
+                        cacheDirectory: true
+                    }
+                },
+                {
+                    test: /\.json$/,
+                    loader: 'json-loader'
                 }
-            }]
+            ]
         },
         profile: false
     }
